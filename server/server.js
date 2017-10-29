@@ -20,7 +20,6 @@ app.post('/todos',(req,res)=>{
 app.get('/todos',(req,res)=>{
    Todo.find().then((todos)=>{
        res.send({todos,code:200});
-       mongoose.disconnect();
    },(err)=>{
        res.status(404).send(err);
    }); 
