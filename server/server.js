@@ -1,4 +1,5 @@
 // C:\Program Files\MongoDB\Server\3.4\bin>mongod.exe --dbpath E:/Node-js/MongoDB-data
+require('./config/config');
 const _=require('lodash');
 var express=require('express');
 var bodyParser=require('body-parser');
@@ -6,7 +7,7 @@ var {mongoose}=require('./db/mongoose');
 var {Todo}=require('./models/todo');
 var {User}=require('./models/user');
 var {ObjectID}=require('mongodb');
-var port=3000;
+var port=process.env.PORT;
 var app=express();
 app.use(bodyParser.json());
 app.post('/todos',(req,res)=>{
