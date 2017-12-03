@@ -1,1 +1,1 @@
-A simple MongoDB and Express API using JWT tokens and hahsing for private routing
+A simple MongoDB, Express and NodeJS API using JWT tokens and hashing for private routing.
